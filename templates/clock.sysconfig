@@ -1,0 +1,6 @@
+# Managed by puppet - do not modify
+# The ZONE parameter is only evaluated by system-config-date.
+# The timezone of the system is defined by the contents of /etc/localtime.
+ZONE="<%= scope.lookupvar('time::timezone') %>"
+UTC=true
+ARC=false
