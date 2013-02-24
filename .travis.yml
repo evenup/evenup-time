@@ -4,23 +4,19 @@ script: "bundle exec rake spec SPEC_OPTS='--format documentation'"
 rvm:
   - 1.8.7
   - 1.9.3
-  - ruby-head
 env:
   - PUPPET_GEM_VERSION="~> 2.7"
   - PUPPET_GEM_VERSION="~> 3.0"
   - PUPPET_GEM_VERSION="~> 3.1"
 matrix:
-  allow_failures:
-    - rvm: ruby-head
   exclude:
     - rvm: 1.9.3
       env: PUPPET_GEM_VERSION="~> 2.7"
-    - rvm: ruby-head
-      env: PUPPET_GEM_VERSION="~> 2.7"
 notifications:
+  email: false
   hipchat:
     rooms:
-      - secure: "Jju6pGlBlzMmfdRwJO1l+IpSUu82tENQJsANbqfNaYTvfc7fyhCv5xKfg5iO\nnFnUQpBHavECi+o2QG2iIcoPrcLprKUSMcgIPS9jh85Usxtnv8L1Jis0G/BU\n3coDITuxez+rEZZYf4vJbw4lYhgAiLTvQN71Isc3zOnfWiCqZ/Q="
+      - secure: "r7hSmrvAInCq0bM8qi7kXvw4cY0muWkK0KO1rG3KGzswIoD8sgEYtB7W052E\nYGidDG5K8z81aoYSH0y7wDqRl/oqQ8eLbfntyEhRXNxk5m3/CDhBQQrNRrLJ\njeZZYFpjPUMWOOZxeIFVzmesLm09Q/4br3a9MoH0YUjqawWMNXk="
   on_success: always
   on_failure: always
 
