@@ -1,6 +1,6 @@
 fixtures:
   repositories:
-    common: gitolite@git.ineu.us:puppet/evenup-common.git
+    common: git://github.com/evenup/evenup-common.git
   symlinks:
     time: "#{source_dir}"
 
