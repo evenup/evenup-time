@@ -1,7 +1,7 @@
 name 'evenup-time'
 version '1.0.2'
 author 'Justin Lambert <jlambert@letsevenup.com>'
-license 'Private'
+license 'Apache'
 summary 'Manages the timezone and ntp.'
 description 'Installs, configures, and runs the ntp service.  Sets the local timezone.'
 source 'http://git.ineu.us/'
