@@ -18,5 +18,9 @@ matrix:
     - rvm: ruby-head
       env: PUPPET_GEM_VERSION="~> 2.7"
 notifications:
-  email: false
+  hipchat:
+    rooms:
+      - secure: "Jju6pGlBlzMmfdRwJO1l+IpSUu82tENQJsANbqfNaYTvfc7fyhCv5xKfg5iO\nnFnUQpBHavECi+o2QG2iIcoPrcLprKUSMcgIPS9jh85Usxtnv8L1Jis0G/BU\n3coDITuxez+rEZZYf4vJbw4lYhgAiLTvQN71Isc3zOnfWiCqZ/Q="
+  on_success: always
+  on_failure: always
 
