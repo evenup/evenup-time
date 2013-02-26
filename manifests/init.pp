@@ -8,9 +8,9 @@
 # Sample Usage:
 #   include time
 #
-class time {
-
-  $timezone = hiera('time::timezone', 'UTC')
+class time (
+  $timezone = 'UTC'
+){
 
   package {
     ['tzdata', 'ntp']:
