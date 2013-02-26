@@ -1,5 +1,5 @@
 name 'evenup-time'
-version '1.0.2'
+version '1.1.0'
 author 'Justin Lambert <jlambert@letsevenup.com>'
 license 'Apache'
 summary 'Manages the timezone and ntp.'
