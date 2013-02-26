@@ -1,8 +1,8 @@
 What is it?
 ===========
 
-A Puppet module that manages the NTP service and ensures the NTP
-service is not configured via DHCP
+A Puppet module that manages the local NTP service, timezone,  and 
+ensures the NTP service is not configured via DHCP
 
 Released under the Apache 2.0 licence
 
