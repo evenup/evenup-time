@@ -45,26 +45,26 @@ class time (
       subscribe => File['/etc/ntp.conf'];
   }
 
-  common::line {
+  file_line {
     'peerntp-eth0-y':
       ensure  => absent,
-      file    => '/etc/sysconfig/network-scripts/ifcfg-eth0',
+      path    => '/etc/sysconfig/network-scripts/ifcfg-eth0',
       line    => 'PEERNTP=yes';
 
     'peerntp-eth0-n':
-      file  => '/etc/sysconfig/network-scripts/ifcfg-eth0',
+      path  => '/etc/sysconfig/network-scripts/ifcfg-eth0',
       line  => 'PEERNTP=no';
   }
 
   if 'eth1' in $::interfaces {
-    common::line {
+    file_line {
       'peerntp-eth1-y':
         ensure  => absent,
-        file    => '/etc/sysconfig/network-scripts/ifcfg-eth1',
+        path    => '/etc/sysconfig/network-scripts/ifcfg-eth1',
         line    => 'PEERNTP=yes';
 
       'peerntp-eth1-n':
-        file    => '/etc/sysconfig/network-scripts/ifcfg-eth1',
+        path    => '/etc/sysconfig/network-scripts/ifcfg-eth1',
         line    => 'PEERNTP=no';
     }
   }

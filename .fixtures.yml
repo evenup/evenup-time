@@ -1,6 +1,6 @@
 fixtures:
   repositories:
-    common: git://github.com/evenup/evenup-common.git
+    stdlib: https://github.com/puppetlabs/puppetlabs-stdlib.git
   symlinks:
     time: "#{source_dir}"
 
