@@ -1,3 +1,4 @@
+  Moved file editing to puppetlabs/stdlib
 v1.1.0:
   Moved to parameterized class from hiera function
 v1.0.2:
