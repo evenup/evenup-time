@@ -1,5 +1,5 @@
 require 'spec_helper'
- 
+
 describe 'time', :type => :class do
 
   let(:facts) { {:interfaces => 'eth0'} }
@@ -20,18 +20,18 @@ describe 'time', :type => :class do
   it { should contain_file('/etc/sysconfig/clock') }
   it { should contain_file('/etc/ntp.conf') }
 
-  it { should contain_common__line('peerntp-eth0-y').with_ensure('absent') }
-  it { should contain_common__line('peerntp-eth0-n') }
+  it { should contain_file_line('peerntp-eth0-y').with_ensure('absent') }
+  it { should contain_file_line('peerntp-eth0-n') }
 
   context "when ::eth1 not in ::interfaces" do
-    it { should_not contain_common__line('peerntp-eth1-y') }
-    it { should_not contain_common__line('peerntp-eth1-n') }
+    it { should_not contain_file_line('peerntp-eth1-y') }
+    it { should_not contain_file_line('peerntp-eth1-n') }
   end
-  
+
   context "when ::eth1 in ::interfaces" do
-    let(:facts) { {:interfaces => 'eth0, eth1'} } 
-    it { should contain_common__line('peerntp-eth1-y') }
-    it { should contain_common__line('peerntp-eth1-n') }
+    let(:facts) { {:interfaces => 'eth0, eth1'} }
+    it { should contain_file_line('peerntp-eth1-y') }
+    it { should contain_file_line('peerntp-eth1-n') }
   end
 
 end
