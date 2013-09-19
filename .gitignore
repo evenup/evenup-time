@@ -1,2 +1,4 @@
 spec/fixtures
-pkg
+pkg/*
+.rspec_system
+
